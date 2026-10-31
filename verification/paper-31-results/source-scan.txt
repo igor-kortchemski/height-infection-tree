@@ -1,0 +1,1 @@
+PASS: 470 project Lean sources; no sorry/admit/custom axiom/native_decide/bv_decide code tokens outside comments or strings.

@@ -1,0 +1,33 @@
+{
+  "kind": "fresh-build-and-axiom-audit",
+  "status": "passed",
+  "repository": "igor-kortchemski/height-infection-tree",
+  "source_commit": "7f56d1daf0ba8d2d621b6da715f1fdb7c44e4961",
+  "workflow_url": "https://github.com/igor-kortchemski/height-infection-tree/actions/runs/41197150015",
+  "run_attempt": "1",
+  "event": "push",
+  "steps": {
+    "checkout": "success",
+    "resources": "success",
+    "toolchain": "success",
+    "checks": "success",
+    "dependencies": "success",
+    "build": "success",
+    "audit": "success",
+    "source_integrity": "success"
+  },
+  "restored_project_artifacts": false,
+  "timings_seconds": {
+    "cache": 128.65,
+    "build": 756.69,
+    "audit": 39.12
+  },
+  "quick_start_cache_and_build_seconds": 885.34,
+  "sizes_bytes": {
+    "toolchain-archive": 594481375.0,
+    "dependency-footprint": 7734317056.0,
+    "lake-footprint": 8833212416.0
+  },
+  "official_palomar_full_preflight": false,
+  "note": "Fresh checkout; dependency cache downloaded from Mathlib. Build and implementation-only axiom audit. Independent kernel replay and negative controls are in the separate private Comparator workflow. This workflow does not run Comparator or independent kernel checkers. Footprints are local disk usage, not total network transfer."
+}

@@ -1,0 +1,71 @@
+module
+
+import all HeightPaper
+import Lean.Util.CollectAxioms
+import Lean.Elab.Command
+
+open Lean Elab Command
+
+set_option maxHeartbeats 0 in
+run_cmd do
+  let env ← getEnv
+  let allowed : Array Name := #[``propext, ``Classical.choice, ``Quot.sound]
+  let mut checked : Nat := 0
+  let mut empty : Nat := 0
+  let mut projectModules : NameSet := {}
+  for (name, _) in env.constants.toList do
+    if let some idx := env.getModuleIdxFor? name then
+      let origin := env.header.moduleNames[idx.toNat]!
+      if origin == `HeightPaper || (`HeightPaper).isPrefixOf origin then
+        projectModules := projectModules.insert origin
+        let deps ← Lean.collectAxioms name
+        for dep in deps do
+          unless allowed.contains dep do
+            throwError "Forbidden axiom {dep} in {name}"
+        checked := checked + 1
+        if deps.isEmpty then empty := empty + 1
+  unless checked > 0 do
+    throwError "No project declarations were audited"
+  logInfo m!"AXIOM AUDIT PASSED: {checked} accessible project declarations from {projectModules.toArray.size} modules; {empty} axiom-free; remaining dependencies only propext, Classical.choice, Quot.sound."
+
+#print axioms HeightPaper.MainTheoremStatement
+#print axioms HeightPaper.mainTheorem
+#print axioms HeightPaper.main_limit
+#print axioms HeightPaper.main_limit_of_asymptotic
+#print axioms HeightPaper.strongProfileTheorem
+#print axioms HeightPaper.uniformStrongProfileTheorem
+#print axioms HeightPaper.correctedCouplingTheorem
+#print axioms HeightPaper.correctedCoupling_canonical
+#print axioms HeightPaper.CountCoupling.localProfile_ae_canonical_complex_compact_limit_ae_physical
+#print axioms HeightPaper.CountCoupling.sourceLocalFluidJoint_tendstoInDistribution
+#print axioms HeightPaper.existsUnique_criticalParameter
+#print axioms HeightPaper.principalLambert_lower_bound
+#print axioms HeightPaper.principalLambert_parameter_lower_bound
+#print axioms HeightPaper.Model.source_weakProfile_bin
+#print axioms HeightPaper.Model.source_weakProfile_tail
+#print axioms HeightPaper.Model.source_dangling_all_conditional
+#print axioms HeightPaper.Model.source_dangling_all_probability
+#print axioms HeightPaper.parameter_mul_fluidSusceptible_extinction
+#print axioms HeightPaper.Model.eventually_lateRecoverySupportedGoodCutoffStates_conditional
+#print axioms HeightPaper.CountCoupling.paper_improved_fluid_lemma
+#print axioms HeightPaper.Model.prescribedPath_profile_martingale
+#print axioms HeightPaper.CountCoupling.positiveReciprocal_uniform_tight
+#print axioms HeightPaper.CountCoupling.ae_tendsto_finiteLocalCenteredReciprocal
+#print axioms HeightPaper.CountCoupling.coupled_count_ratio_uniform_tight
+#print axioms HeightPaper.CountCoupling.walkGap_uniform_tight
+#print axioms HeightPaper.CountCoupling.finiteCenteredReciprocal_uniform_tight
+#print axioms HeightPaper.CountCoupling.safeCutoff_survival_disagreement_uniform
+#print axioms HeightPaper.CountCoupling.finiteProfileMoment_uniform_bound
+#print axioms HeightPaper.CountCoupling.finiteNormalizer_errors_uniform_tight
+#print axioms HeightPaper.CountCoupling.finiteProfileIncrementMoment_uniform_exp
+#print axioms HeightPaper.CountCoupling.finiteProfileDifferenceMoment_shrinking_tilts
+#print axioms HeightPaper.CountCoupling.exists_uniform_finiteShiftedProfile_original_source_tilt_order
+#print axioms HeightPaper.CountCoupling.localNormalizer_ae_source_asymptotic
+#print axioms HeightPaper.CountCoupling.localComplexGrowthPowerBad_uniform_tight
+#print axioms HeightPaper.CountCoupling.localProfile_ae_complex_compact_uniform_lp
+#print axioms HeightPaper.CountCoupling.uniform_finiteShifted_localLimit_horizon_extendedConditionalMoment_localSurvival
+#print axioms HeightPaper.CountCoupling.localAnalyticProfileLimit_ae_pos_all_real
+#print axioms HeightPaper.CountCoupling.localAnalyticProfileLimit_ae_nonzero_all_real
+#print axioms HeightPaper.Urn.ae_convergence_proportion_and_draws
+#print axioms HeightPaper.Urn.hasLaw_limit_bernoulli_iff
+#print axioms HeightPaper.Urn.interior_probability_pos_iff

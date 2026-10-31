@@ -1,0 +1,38 @@
+Verification of paper-31-results
+Date: 2026-10-31 (Europe/Paris)
+Result: PASS
+
+Commit: da98007a3268a469ffa8ff48ceec43034f842930
+Verification checkout: <independent-verification-checkout>
+Original checkout: <source-checkout>
+Both tracked worktrees are clean and remain at the tagged commit.
+
+1. Checkout
+Created an independent local Git clone with --no-local, detached at paper-31-results.
+All 501 project files came from Git; no original untracked project files were copied.
+No project build cache or project oleans were copied.
+
+2. Source rebuild
+Lean (version 4.35.0, x86_64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)
+Command: lake --no-cache --rehash build
+PASS: all 470 project Lean modules rebuilt from source; 4383 build tasks completed.
+Build duration: 969.3 seconds.
+All nine dependency revisions match lake-manifest.json.
+Independent copies of pinned dependency sources and build caches were reused.
+Mathlib and other dependency caches were not rebuilt from scratch.
+All 470 compiler setup files and 16784 absolute artifact paths were checked.
+No build input path refers to the original checkout or another workspace.
+Every project module belongs to the HeightPaper entry-point import closure.
+
+3. Axiom and source checks
+PASS: 7067 accessible project declarations from 469 declaration-bearing modules audited.
+412 declarations are axiom-free.
+All other dependencies are among propext, Classical.choice, Quot.sound.
+All 41 named certificate axiom checks passed, covering the 31 results and major exports.
+PASS: no sorry/admit/custom axiom/native_decide/bv_decide tokens in project code outside comments or strings.
+
+Evidence files (all under ignored .lake/verification):
+build.log, build-result.json, toolchain.txt, preflight.json, independence-result.json,
+axioms.log, axiom-result.json, source-scan.txt, AxiomAudit.lean.
+
+The tag and the original source checkout were preserved. No remote push was performed.

@@ -1,0 +1,63 @@
+name: Palomar full preflight
+
+"on":
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: Full 40-character commit in this repository to verify
+        required: true
+        type: string
+      authorization_relationship:
+        description: Truthful supported relationship; see publication/PALOMAR.md
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  request:
+    name: Validate the public preflight request
+    runs-on: ubuntu-24.04
+    outputs:
+      source_commit: ${{ steps.request.outputs.source_commit }}
+      request_id: ${{ steps.request.outputs.request_id }}
+      options: ${{ steps.request.outputs.options }}
+    steps:
+      - name: Require a public source and an explicit immutable commit
+        id: request
+        env:
+          PRIVATE_REPOSITORY: ${{ github.event.repository.private }}
+          SOURCE_COMMIT: ${{ inputs.source_commit }}
+          AUTHORIZATION_RELATIONSHIP: ${{ inputs.authorization_relationship }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, os, re
+          if os.environ['PRIVATE_REPOSITORY'] != 'false':
+              raise SystemExit('Public release is required before official full preflight. The repository remains private.')
+          commit = os.environ['SOURCE_COMMIT']
+          if not re.fullmatch(r'[0-9a-f]{40}', commit):
+              raise SystemExit('Enter a full lowercase 40-character source commit.')
+          relationship = os.environ['AUTHORIZATION_RELATIONSHIP']
+          if not relationship.strip():
+              raise SystemExit('A truthful authorization relationship is required.')
+          request = hashlib.sha256((os.environ['GITHUB_RUN_ID'] + ':' + os.environ['GITHUB_RUN_ATTEMPT']).encode()).hexdigest()[:12]
+          options = json.dumps({'comparator_config_path': 'comparator.json',
+                                'authorization_relationship': relationship}, separators=(',', ':'))
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write(f'source_commit={commit}\nrequest_id={request}\noptions={options}\n')
+          PY
+
+  full:
+    name: Official full mechanical preflight
+    needs: request
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ needs.request.outputs.source_commit }}
+      pipeline_commit: 14aa8d6b3c2f14a8540605e37144560b9a00e7e7
+      request_id: ${{ needs.request.outputs.request_id }}
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: ${{ needs.request.outputs.options }}

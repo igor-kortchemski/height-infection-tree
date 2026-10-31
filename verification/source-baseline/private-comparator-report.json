@@ -1,0 +1,81 @@
+{
+  "kind": "private-standalone-comparator",
+  "mandatory_status": "passed",
+  "kernels": [
+    "Lean",
+    "NanoDa"
+  ],
+  "kernel_attempts": [],
+  "controls": {
+    "matching": "passed",
+    "ControlWrong": "passed",
+    "ControlAxiom": "passed",
+    "ControlIllTyped": "passed"
+  },
+  "official_palomar_full_preflight": false,
+  "status": "passed",
+  "pipeline_policy_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+  "source_commit": "7f56d1daf0ba8d2d621b6da715f1fdb7c44e4961",
+  "repository": "igor-kortchemski/height-infection-tree",
+  "run_id": "41197345160",
+  "run_attempt": "1",
+  "scope": "Exact local source snapshot; supported Comparator with Lean and NanoDa; independently compiled Lean core and Mathlib Challenge. No registry submission or registration.",
+  "tool_digests": {
+    "lean": "bf8d54e4714cc4b03d3f6bb34c83b7202b87e49c8bfcbff6895c085bb90ceb38",
+    "lake": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "leanexport": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "leanchecker": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "nanoda_bin": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5",
+    "bwrap": "bb37d678eaf49a127716f454130eabbbf10104d2a596242c7e976293320febc8"
+  },
+  "source_snapshot_sha256": "a043b794f25cebdec8243ab55bcc385aaf22dca906452bc32dd02a55abfc87c0",
+  "comparator_config_sha256": "ccfa4a1d4f8f7efd629f60f442036907e752efed2281e094661b105dd18b731e",
+  "library_build": "lake build (all configured default targets)",
+  "theorem_names": [
+    "HeightPaper.mainTheorem",
+    "HeightPaper.strongProfileTheorem",
+    "HeightPaper.uniformStrongProfileTheorem"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "runtime_executable_lookup": "passed",
+  "challenge_compilation": {
+    "status": "passed",
+    "direct_imports": [
+      "Mathlib.Probability.ProbabilityMassFunction.Constructions",
+      "Mathlib.Probability.Distributions.Bernoulli",
+      "Mathlib.MeasureTheory.Measure.ProbabilityMeasure",
+      "Mathlib.Analysis.Asymptotics.AsymptoticEquivalent",
+      "Mathlib.Analysis.SpecialFunctions.Log.Basic",
+      "Mathlib.Data.Finset.Max",
+      "Mathlib.Tactic.Linarith",
+      "Mathlib.Tactic.Positivity",
+      "Lean.Meta.Match.Match",
+      "Lean.Elab.Command"
+    ],
+    "implementation_artifacts_on_search_path": false,
+    "source_sha256": "cbd5bc35ccf91421db14bac58acdc11739992bc7d55b8b196d763d394231ad97",
+    "export_sha256": "46e39f122532cfc629a8ff930679055584c1ebb538d32e3355819ceeebb3d3c4"
+  },
+  "export_sha256": {
+    "challenge": "46e39f122532cfc629a8ff930679055584c1ebb538d32e3355819ceeebb3d3c4",
+    "solution": "29ff9ff9eed61b87141c0326ca24371c2c1c6435a5a682f9be12f53c233ddfb9"
+  },
+  "source_integrity": "passed",
+  "elapsed_seconds": 1280.327,
+  "steps": {
+    "checkout": "success",
+    "toolchain": "success",
+    "comparator": "success",
+    "source_integrity": "success"
+  },
+  "workflow_url": "https://github.com/igor-kortchemski/height-infection-tree/actions/runs/41197345160",
+  "required_kernels": [
+    "Lean",
+    "NanoDa"
+  ],
+  "note": "Private standalone verification only. Incomplete controls, mandatory phases, or source-integrity checks are not a pass. No public release, Palomar full preflight, intake or registration occurs."
+}

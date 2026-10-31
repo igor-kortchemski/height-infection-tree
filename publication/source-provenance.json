@@ -1,0 +1,17 @@
+{
+  "kind": "clean-substantive-publication-copy",
+  "source_commit": "7f56d1daf0ba8d2d621b6da715f1fdb7c44e4961",
+  "source_history_included": false,
+  "lean_source_files": 473,
+  "protected_source_files": 477,
+  "mathematical_source_changes": false,
+  "reviewed_manuscript_sha256": "c247d8b4479bf300e3529ed35701a07b00277584d2d66d4587f39a0e8d2c1626",
+  "public_bibliographic_reference": "https://arxiv.org/abs/2504.03526v1",
+  "public_reference_byte_identity_claimed": false,
+  "manuscript_included": false,
+  "source_hash_manifest": "publication/source-files.sha256",
+  "palomar_policy_commit": "28bd48b9b71bbb2a82c718ce761d5a4220ef8e60",
+  "palomar_submission_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
+  "metadata_schema_commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e",
+  "note": "Baseline reports identify the source archive commit. Verification of any new publication-copy commit requires its own reports."
+}

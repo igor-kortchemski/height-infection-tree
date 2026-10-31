@@ -1,0 +1,12 @@
+Height of the infection tree: Lean formalization
+Copyright 2026 Igor Kortchemski.
+
+The original Lean formalization, supporting scripts and formalization
+documentation in this publication copy are distributed under Apache-2.0;
+see LICENSE. Lean, Mathlib and other dependencies retain their own licences.
+
+The mathematical source is The height of the infection tree by Emmanuel
+Kammerer, Igor Kortchemski and Delphin Senizergues (arXiv:2504.03526).
+The manuscript, figures, bibliography and coauthor review drafts are not
+distributed in this repository. Apache-2.0 does not grant rights to those
+separately held materials.

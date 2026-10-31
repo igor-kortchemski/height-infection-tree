@@ -1,0 +1,13 @@
+{
+  "command": [
+    "lake",
+    "--no-cache",
+    "--rehash",
+    "build"
+  ],
+  "returncode": 0,
+  "elapsed_seconds": 969.3,
+  "lean_version": "Lean (version 4.35.0, x86_64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "project_artifacts_copied": false,
+  "dependencies_cached": true
+}

@@ -1,0 +1,74 @@
+AXIOM AUDIT PASSED: 5190 accessible project declarations from 469 modules; 401 axiom-free; remaining dependencies only propext, Classical.choice, Quot.sound.
+'HeightPaper.MainTheoremStatement' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.mainTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.main_limit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.main_limit_of_asymptotic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.strongProfileTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.uniformStrongProfileTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.correctedCouplingTheorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.correctedCoupling_canonical' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.CountCoupling.localProfile_ae_canonical_complex_compact_limit_ae_physical' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.sourceLocalFluidJoint_tendstoInDistribution' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.existsUnique_criticalParameter' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.principalLambert_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.principalLambert_parameter_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Model.source_weakProfile_bin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Model.source_weakProfile_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Model.source_dangling_all_conditional' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Model.source_dangling_all_probability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.parameter_mul_fluidSusceptible_extinction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Model.eventually_lateRecoverySupportedGoodCutoffStates_conditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.paper_improved_fluid_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Model.prescribedPath_profile_martingale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.CountCoupling.positiveReciprocal_uniform_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.CountCoupling.ae_tendsto_finiteLocalCenteredReciprocal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.coupled_count_ratio_uniform_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.CountCoupling.walkGap_uniform_tight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.CountCoupling.finiteCenteredReciprocal_uniform_tight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.safeCutoff_survival_disagreement_uniform' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.finiteProfileMoment_uniform_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.CountCoupling.finiteNormalizer_errors_uniform_tight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.finiteProfileIncrementMoment_uniform_exp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.finiteProfileDifferenceMoment_shrinking_tilts' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.exists_uniform_finiteShiftedProfile_original_source_tilt_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.localNormalizer_ae_source_asymptotic' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.localComplexGrowthPowerBad_uniform_tight' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.localProfile_ae_complex_compact_uniform_lp' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.uniform_finiteShifted_localLimit_horizon_extendedConditionalMoment_localSurvival' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.localAnalyticProfileLimit_ae_pos_all_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.CountCoupling.localAnalyticProfileLimit_ae_nonzero_all_real' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'HeightPaper.Urn.ae_convergence_proportion_and_draws' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Urn.hasLaw_limit_bernoulli_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'HeightPaper.Urn.interior_probability_pos_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
