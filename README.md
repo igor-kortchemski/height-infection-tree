@@ -1,15 +1,43 @@
-# Height and active profile of the infection tree
+# The height of the infection tree: Lean formalization
 
-Lean 4 proofs of height and active-profile asymptotics for the embedded SIR
-infection tree. The mathematical source is *The height of the infection tree*
+This repository formalizes **all 31 numbered results** of *The height of the
+infection tree* under the embedded SIR epidemic model, with the corrections and
+endpoint conventions explicitly listed below. The mathematical source is the paper
 by Emmanuel Kammerer, Igor Kortchemski and Delphin Sénizergues
 ([public paper reference](https://arxiv.org/abs/2504.03526v1)).
 
-This repository contains the complete formalization library and a small
-Palomar statement interface. It is being prepared privately for a possible
-public release. No Palomar submission or registration has occurred.
+`height-infection-tree` is the active project and contains the complete Lean
+library. Its proposed Palomar entry selects the two main theorems and the
+parameter-uniform strengthening, as described below. Publication preparation
+is private; public release, Palomar submission and registration remain pending.
 
-## Read the results
+## Coverage and explicit corrections
+
+The completed statement audit records **25 source matches and six corrected
+statements or endpoint conventions**: 2 theorems, 8 propositions, 20 lemmas,
+and 1 corollary in total. The existing [31-result inventory](FORMALIZATION_REPORT.md#numbered-result-inventory)
+maps every result to its Lean certificate. The [detailed correction record](FORMALIZATION_REPORT.md#explicit-corrections-and-conventions-in-the-six-relevant-entries)
+gives the corrected scope and certificate for each of these six entries:
+
+| Paper result | Correction or convention used by the formalization |
+| --- | --- |
+| `lem:couplage` | The coupling event includes the terminal recovery. The replacement is proved separately; the printed event is false. |
+| `lem:dangling` | Components are fresh outgrowths obtained by deleting edges already present at the cutoff. |
+| `lem:eventE` | Restrict the tolerance to $0<\eta<\min(m_\lambda,1-m_\lambda)$. |
+| `lem:sum 1/Sni is gamma log k` | The literal logarithmic formula uses positive times; at time zero the centered empty sum is defined as zero. |
+| `proposition majoration increments Mn` | Require $k<\lfloor nt\rfloor$, since the increment uses the next time. |
+| `lemme z n proche de z` | Require $A_n\le\lfloor nt\rfloor$ for the preterminal comparison. |
+
+The report separately identifies alternative proof routes and proof corrections.
+Certification of these statements does not assert that every printed argument
+of the article was checked. The source revision and model limitations are
+specified below.
+
+## Selected Palomar results
+
+The current [Comparator configuration](comparator.json) selects these three
+declarations for one proposed Palomar entry. Its comparison covers this selection;
+the full 31-result library is compiled and audited separately.
 
 | Paper result | Lean certificate | Meaning |
 | --- | --- | --- |
@@ -21,12 +49,6 @@ Start with [Challenge.lean](Challenge.lean): 293 lines of concrete definitions
 and these three statements. [Solution.lean](Solution.lean) exposes their proofs.
 The three theorem holes in the Challenge are deliberate statement artifacts;
 there are no definition holes or implementation proof holes.
-
-The full library retains certificates for all **31 numbered results**, with
-explicitly recorded corrections. The [formalization report](FORMALIZATION_REPORT.md#numbered-result-inventory)
-maps each result to its certificate and explains departures from the paper's
-arguments. Only the three declarations above are selected by this
-[Comparator configuration](comparator.json).
 
 ## Scope and source correspondence
 
@@ -66,6 +88,13 @@ the selected statements and their definitions, checks permitted axioms, and
 replays the Solution with Lean and NanoDa. Positive and negative controls
 must pass. Reports identify the exact source commit.
 
+The unchanged mathematical sources passed a [fresh Linux build and axiom audit](https://github.com/igor-kortchemski/height-infection-tree/actions/runs/41202102007)
+and [Comparator with Lean and NanoDa](https://github.com/igor-kortchemski/height-infection-tree/actions/runs/41202125566)
+at `palomar-candidate-v1`, commit `a75323a1a0fb78ee01c47f9fa5b38fa52a509de3`.
+These runs preceded the repository rename and documentation update. The source
+identity manifest confirms that every Lean file and the build, dependency and
+Comparator configuration still match that verified mathematical baseline.
+
 [Baseline evidence](verification/source-baseline/README.md) records the passing
 build and Lean/NanoDa Comparator run for the unchanged mathematical sources
 before this clean copy was made. It is not a verification report for this
@@ -76,5 +105,6 @@ for the separate official full-preflight workflow and release procedure.
 
 The formalization uses [Apache-2.0](LICENSE); see [NOTICE](NOTICE).
 This is a substantive source copy, containing all proofs and dependencies'
-pins, rather than an importing wrapper. Its Git history starts here and
-contains no earlier manuscript drafts or development history.
+pins. Its Git history contains no manuscript drafts or earlier development
+history. The original development project is preserved as a separate private,
+read-only archive; further work belongs in this repository.

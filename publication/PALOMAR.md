@@ -1,5 +1,11 @@
 # Palomar publication candidate
 
+The active project is `igor-kortchemski/height-infection-tree`. It is the clean
+publication repository originally prepared as `height-infection-tree-palomar`;
+the rename preserves its commit history, tags and verification runs. The former
+development repository is retained privately as `height-infection-tree-archive`
+and is archived read-only. Its manuscript history is not in this active project.
+
 This clean publication repository is private during preparation. Its source
 tree includes the complete Lean library, selected statement interface,
 metadata, verification scripts and evidence. It excludes manuscript files,
@@ -19,6 +25,11 @@ unchanged. `publication/source-files.sha256` records the byte identity of every
 Lean source and the build/dependency/Comparator files with the verified source
 baseline. The existing 31-result inventory and proof-route disclosures remain
 in `FORMALIZATION_REPORT.md`.
+
+Repository coverage is all 31 numbered results: 25 source matches and six
+explicit corrections or endpoint conventions. This complete-library claim is
+distinct from the three selected declarations in the proposed Palomar entry.
+The README makes both scopes and the six corrections visible at the start.
 
 Metadata distinguishes the supplied revised manuscript from the public arXiv
 bibliographic reference. Historical line numbers refer to that supplied
@@ -69,7 +80,7 @@ service's editorial review or register a result.
 ## Later submission decisions
 
 The candidate repository is
-`igor-kortchemski/height-infection-tree-palomar`. The project, metadata and
+`igor-kortchemski/height-infection-tree`. The project, metadata and
 Comparator paths are the root, `formalization.yaml`, and `comparator.json`.
 Use a full immutable commit, not a branch or tag, for an eventual submission.
 

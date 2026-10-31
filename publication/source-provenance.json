@@ -13,5 +13,10 @@
   "palomar_policy_commit": "28bd48b9b71bbb2a82c718ce761d5a4220ef8e60",
   "palomar_submission_commit": "14aa8d6b3c2f14a8540605e37144560b9a00e7e7",
   "metadata_schema_commit": "99c678e569c7c4c0772db297c5ddd5e4c9b6322e",
-  "note": "Baseline reports identify the source archive commit. Verification of any new publication-copy commit requires its own reports."
+  "note": "Baseline reports identify the source archive commit. Verification of any new publication-copy commit requires its own reports.",
+  "active_repository": "igor-kortchemski/height-infection-tree",
+  "active_repository_id": 1440844580,
+  "renamed_from": "igor-kortchemski/height-infection-tree-palomar",
+  "development_archive_repository": "igor-kortchemski/height-infection-tree-archive",
+  "development_archive_repository_id": 1440719370
 }

@@ -1,5 +1,10 @@
 # Publication candidate
 
+The active repository is `igor-kortchemski/height-infection-tree`; its local
+directory is `height-infection-tree`. All further formalization work belongs
+here. The original `height-paper-full` checkout and its renamed GitHub repository
+`height-infection-tree-archive` are private development archives.
+
 This is a clean publication copy of the infection-tree formalization. The
 development archive, manuscript drafts and planning history are kept separately.
 Do not add them to this repository as part of routine publication work.

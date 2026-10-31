@@ -1,8 +1,8 @@
 {
   "version": "v0.4",
   "project": {
-    "name": "Height and active profile of the infection tree",
-    "description": "A Lean formalization of the logarithmic height limit and strong active-profile asymptotics for the embedded SIR infection tree on the complete graph. The height theorem retains arbitrary asymptotic infection-rate sequences and the full Bernoulli mixture across early extinction and macroscopic survival. The profile theorem retains exact lattice heights, the Gaussian logarithmic correction and compact-parameter uniformity. These results concern probabilists studying random trees, branching processes and epidemic geometry. The substantive library also certifies all 31 numbered results of the supplied revised manuscript, with documented corrections.",
+    "name": "The height of the infection tree",
+    "description": "A Lean formalization of all 31 numbered results of The height of the infection tree under the embedded SIR epidemic model, with six explicit statement corrections or endpoint conventions. The height theorem retains arbitrary asymptotic infection-rate sequences and the full Bernoulli mixture across early extinction and macroscopic survival. The strong profile theorem retains exact lattice heights, the Gaussian logarithmic correction and compact-parameter uniformity. These results concern probabilists studying random trees, branching processes and epidemic geometry. The proposed Palomar entry selects the two main theorems and the following parameter-uniform strengthening; the full library and result-by-result coverage record are included.",
     "authors": [
       "Igor Kortchemski"
     ],
@@ -53,7 +53,7 @@
   ],
   "related_formalizations": [],
   "status": {
-    "scope": "The selected Comparator record covers thm:main, thm:profil and the compact-parameter strengthening immediately following thm:profil. The underlying model is the explicit embedded epidemic chain with uniform active-parent selection. The continuous-time Poisson/exponential construction and its equivalence to this chain are not separately formalized. All 31 numbered source results remain in the substantive library; corrections to auxiliary results and alternative proof routes are recorded in FORMALIZATION_REPORT.md. The numerical approximation to the critical parameter is not certified. Counts exclude exactly three deliberate theorem holes in Challenge.lean. This substantive publication copy contains the full Lean library and excludes manuscript and coauthor review files. No official Palomar full preflight, intake or registration is claimed.",
+    "scope": "All 31 numbered results of the supplied revised manuscript are formalized: 25 source matches and six explicit corrections or endpoint conventions, recorded in FORMALIZATION_REPORT.md and summarized in README.md. The current Comparator selection covers only thm:main, thm:profil and the compact-parameter strengthening immediately following thm:profil. The underlying model is the explicit embedded epidemic chain with uniform active-parent selection. The continuous-time Poisson/exponential construction and its equivalence to this chain are not separately formalized. The numerical approximation to the critical parameter is not certified. Counts exclude exactly three deliberate theorem holes in Challenge.lean. This substantive clean repository contains the full Lean library and excludes manuscript and coauthor review files. No official Palomar full preflight, intake or registration is claimed.",
     "sorry_count": 0,
     "sorry_in_definitions": 0,
     "axioms": [
@@ -83,7 +83,7 @@
     "notes": "The human maintainer directed the formalization and manuscript alignment. AI assistance and AI reviewer audits are not represented as independent human mathematical review."
   },
   "fidelity": {
-    "divergences": "The two selected numbered statements retain their mathematical targets under the embedded epidemic model. Analytic parameters use equivalent root/infimum characterizations instead of a global Lambert-W function. Several proofs use alternative routes. Auxiliary corrections include the terminal-recovery coupling event, disjoint fresh components, admissible perturbation and time-index ranges. See FORMALIZATION_REPORT.md. The separate manuscript proof companion is retained privately and is not distributed here. Certification does not assert that every printed paper argument was checked."
+    "divergences": "The two selected numbered main statements retain their mathematical targets under the embedded epidemic model. Among all 31 numbered results, six entries have explicit corrections or endpoint conventions: terminal recovery in the coupling event; fresh outgrowth components after the cutoff; the admissible eta range in lem:eventE; the time-zero reciprocal-sum convention; the strict upper time bound for profile increments; and the preterminal bound on A_n in the small-tilt comparison. FORMALIZATION_REPORT.md states these changes and distinguishes them from alternative proof routes and proof-only corrections. Analytic parameters use equivalent root/infimum characterizations instead of a global Lambert-W function. The private manuscript proof companion is not distributed here. Certification does not assert that every printed paper argument was checked."
   },
   "review": {
     "status": "AI-assisted statement audits; no independent human review claimed",

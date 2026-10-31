@@ -2,6 +2,13 @@
 
 ## Publication-copy context (31 October 2026)
 
+The active project is `igor-kortchemski/height-infection-tree`, formerly the
+clean publication candidate `height-infection-tree-palomar`. The original
+development repository is retained privately, read-only, as
+`height-infection-tree-archive`. Its complete Git history and manuscript files
+were backed up and independently read back before the rename. This publication
+project retains its clean history and the complete 31-result coverage record.
+
 This coverage record is retained from the development archive. The publication
 copy contains the complete Lean sources from verified baseline commit
 `7f56d1daf0ba8d2d621b6da715f1fdb7c44e4961`, with no mathematical edits.
@@ -715,12 +722,15 @@ no official full Palomar preflight, intake or registration has been performed.
 ## Numbered result inventory
 
 The source contains 31 numbered result environments: 2 theorems, 8 propositions,
-20 lemmas, and 1 corollary. Line numbers refer to the current TeX source.
-“Open” includes results for which useful generic helpers exist but the advertised
-statement is unproved. “Complete” refers to the mathematical result; the proof
-correspondence section distinguishes alternative proofs.
+20 lemmas, and 1 corollary. **All 31 have completed certificates: 25 match the
+source statements and six use the explicit corrections or endpoint conventions
+listed above.** Line numbers refer to the supplied revised TeX source retained
+in the private archive. “Complete” refers to the mathematical result under the
+stated correction or convention; the proof correspondence section distinguishes
+alternative proofs. The proposed Palomar comparison selects the two main
+theorems and the following parameter-uniform strengthening.
 
-| TeX label or location | Line | Coverage | Lean correspondence or remaining work |
+| TeX label or location | Line | Coverage | Lean certificate and statement correspondence |
 | --- | --- | --- | --- |
 | `thm:main` | 240 | Complete; source statement audited | `mainTheorem : MainTheoremStatement`, `main_limit`, `main_limit_of_asymptotic`; all stochastic inputs discharged. |
 | `thm:profil` | 382 | Complete; source statement audited | `strongProfileTheorem : StrongProfileStatement` proves the fixed-parameter source theorem, including exact lattice equality, zero-profile failure, the $-\frac12\log\log n$ correction, uniformity over every compact admissible tilt set, and non-strict source survival. `uniformStrongProfileTheorem : UniformStrongProfileStatement` also proves the separately stated weak compact-parameter uniformity. |

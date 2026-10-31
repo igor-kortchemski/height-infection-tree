@@ -26,6 +26,14 @@ later commit or the official full Palomar pipeline. The original workflow
 URLs in the reports refer to private runs and may be inaccessible to readers;
 the reports and logs themselves are retained here for inspection.
 
+Those raw reports retain the historical repository name `height-infection-tree`.
+That source repository (GitHub id `1440719370`) is now the private, read-only
+`height-infection-tree-archive`. The active clean repository is now named
+`height-infection-tree` (GitHub id `1440844580`), formerly
+`height-infection-tree-palomar`. The historical baseline workflow URLs must
+therefore be read with the archive repository name; the original JSON is
+preserved without rewriting its recorded identity.
+
 Current publication-candidate verification belongs to its own exact-commit
 CI and Comparator artifacts. Public release, full Palomar preflight, intake
 and registration are separate later steps.
