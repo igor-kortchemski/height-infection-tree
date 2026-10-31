@@ -6,8 +6,10 @@ the rename preserves its commit history, tags and verification runs. The former
 development repository is retained privately as `height-infection-tree-archive`
 and is archived read-only. Its manuscript history is not in this active project.
 
-This clean publication repository is private during preparation. Its source
-tree includes the complete Lean library, selected statement interface,
+The maintainer authorized public release and official full mechanical preflight
+on 31 October 2026. The clean repository is public; the development archive
+remains private and read-only. The public source tree includes the complete
+Lean library, selected statement interface,
 metadata, verification scripts and evidence. It excludes manuscript files,
 figures, coauthor review drafts, local skills and development roadmaps. Its
 new Git history does not contain those excluded materials.
@@ -38,15 +40,16 @@ No independent human review or blanket verification of the paper's proofs is
 claimed. The continuous-time construction and numerical critical value retain
 the limitations stated in the README and metadata.
 
-## Checks available while private
+## Build and private-preparation evidence
 
 The automatic build workflow uses a fresh checkout, the pinned Mathlib
 dependency cache, a complete source build and an implementation axiom audit.
-The manually dispatched private Comparator workflow runs positive/negative
+During private preparation, the manually dispatched Comparator workflow ran positive/negative
 controls, an independent dependency-only Challenge compilation, statement and
-definition comparison, and Lean/NanoDa replay. Exact-commit reports and logs
-are private Actions artifacts. These workflows do not perform official full
-Palomar verification.
+definition comparison, and Lean/NanoDa replay. Its private-repository guard
+prevents use after public release. Those standalone checks are retained as
+preparation evidence. Current official full-preflight outcomes belong to the
+separate reusable workflow's exact-commit mechanical report.
 
 The retained baseline reports describe their original source commit. A
 publication candidate's current outcome must be read from its own run, not
@@ -63,8 +66,8 @@ It selects `mode: full` and `execution_profile: palomar-standard-v1`, generates
 a 12-character request identifier and passes the chosen relationship using
 JSON serialization. No token or secret is forwarded to the reusable workflow.
 
-After the maintainer authorizes public release, recheck the current policy and
-pipeline revisions before running the workflow. In Actions, select **Palomar
+Recheck the current policy and pipeline revisions before running the workflow.
+In Actions, select **Palomar
 full preflight**, enter the candidate's full commit, and enter the truthful
 supported relationship. For the responsible maintainer the documented value is
 `I am a responsible author or maintainer`. The workflow fails its guard while
@@ -84,7 +87,7 @@ The candidate repository is
 Comparator paths are the root, `formalization.yaml`, and `comparator.json`.
 Use a full immutable commit, not a branch or tag, for an eventual submission.
 
-Public release, service intake and registration remain pending. Intake follows
+Service intake and registration remain pending. Intake follows
 the live service protocol. Registration requires the maintainer's decision
 after seeing the returned review; a preflight pass does not make that decision.
 

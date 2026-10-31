@@ -18,5 +18,7 @@
   "active_repository_id": 1440844580,
   "renamed_from": "igor-kortchemski/height-infection-tree-palomar",
   "development_archive_repository": "igor-kortchemski/height-infection-tree-archive",
-  "development_archive_repository_id": 1440719370
+  "development_archive_repository_id": 1440719370,
+  "public_release_date": "2026-10-31",
+  "development_archive_visibility": "private"
 }

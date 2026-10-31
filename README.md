@@ -8,8 +8,9 @@ by Emmanuel Kammerer, Igor Kortchemski and Delphin Sénizergues
 
 `height-infection-tree` is the active project and contains the complete Lean
 library. Its proposed Palomar entry selects the two main theorems and the
-parameter-uniform strengthening, as described below. Publication preparation
-is private; public release, Palomar submission and registration remain pending.
+parameter-uniform strengthening, as described below. The clean repository was
+made public with the maintainer's authorization on 31 October 2026. The
+development archive remains private. Palomar intake and registration remain pending.
 
 ## Coverage and explicit corrections
 
@@ -82,11 +83,13 @@ Lean is pinned to **4.35.0**, and Mathlib and its dependencies are pinned in
 and Challenge as separate modules. Do not import Challenge and Solution into
 the same environment: they intentionally declare the same names.
 
-CI performs a fresh build and the implementation axiom audit. The manual
-private Comparator workflow independently compiles the Challenge, compares
-the selected statements and their definitions, checks permitted axioms, and
-replays the Solution with Lean and NanoDa. Positive and negative controls
-must pass. Reports identify the exact source commit.
+CI performs a fresh build and the implementation axiom audit. During private
+preparation, the standalone Comparator workflow independently compiled the
+Challenge, compared the selected statements and their definitions, checked
+permitted axioms, and replayed the Solution with Lean and NanoDa, with positive
+and negative controls. After public release, the prepared official full-preflight
+workflow supplies the complete mechanical verification. Read its exact-commit
+report for the outcome; running a workflow alone does not establish a pass.
 
 The unchanged mathematical sources passed a [fresh Linux build and axiom audit](https://github.com/igor-kortchemski/height-infection-tree/actions/runs/41202102007)
 and [Comparator with Lean and NanoDa](https://github.com/igor-kortchemski/height-infection-tree/actions/runs/41202125566)

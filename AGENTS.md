@@ -21,7 +21,8 @@ Do not add them to this repository as part of routine publication work.
   Distinguish historical evidence, current verification and paper-proof fidelity.
 - Run `python3 scripts/check-package.py`, appropriate build checks and the axiom
   audit before claiming verification. Inspect exact-commit Comparator reports.
-- Publication preparation does not authorize public release, Palomar intake or
-  registration. The repository remains private until the maintainer decides.
+- The maintainer authorized public release and official full Palomar preflight
+  on 31 October 2026. Keep `height-infection-tree-archive` private and read-only.
+  Service intake and registration require their separate later authorization.
 - In Markdown, use `$...$` inline. Put each `$$` display delimiter on its own
   line, with blank lines surrounding the display. Use MathJax-compatible LaTeX.

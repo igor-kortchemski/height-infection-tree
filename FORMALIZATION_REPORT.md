@@ -2,6 +2,13 @@
 
 ## Publication-copy context (31 October 2026)
 
+The maintainer authorized public release and official full mechanical preflight
+on 31 October 2026. The clean project is public and the development archive
+remains private and read-only. Official full-preflight outcomes must be read
+from the exact-commit mechanical report; service intake and registration have
+not been requested. Earlier private-preparation status statements below are
+historical records.
+
 The active project is `igor-kortchemski/height-infection-tree`, formerly the
 clean publication candidate `height-infection-tree-palomar`. The original
 development repository is retained privately, read-only, as
