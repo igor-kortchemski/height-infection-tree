@@ -38,8 +38,9 @@ Baseline Linux CI and private Comparator both passed for the source commit
 above, including Lean and NanoDa acceptance. Their inspected reports are
 archived in `verification/source-baseline/`. They are historical evidence, not
 reports for a later publication-copy commit. Fresh verification of this copy
-is recorded by its own CI and Comparator reports. No official full Palomar
-preflight, intake or registration has occurred.
+is recorded by its own CI and Comparator reports. The official full Palomar
+preflight has its own exact-commit mechanical report; registry intake and
+registration have not been requested.
 
 ## Status and scope
 
@@ -110,8 +111,10 @@ survival and safe-cutoff indicators.
 - Lean: `leanprover/lean4:v4.35.0`.
 - Mathlib: `v4.35.0`, revision `56a005855ea17e0b0958f73ec801ae140b0a1679`.
 - The exact transitive pins are in `lake-manifest.json`.
-- Git records the milestone and subsequent work. `AGENTS.md` preserves the
-  inherited main-theorem exports; no separate frozen export manifest is present.
+- Git records the milestone and subsequent work. The inherited main-theorem
+  exports `MainTheoremStatement`, `mainTheorem`, `main_limit` and
+  `main_limit_of_asymptotic` are preserved; no separate frozen export manifest
+  is present.
 - The TeX source was corrected at `lem:eventE`, its use in `lem:dangling`,
   an algebraic sign in the proof of `lemme z n proche de z`, and the missing
   preterminal bound $A_n\le\lfloor nt\rfloor$ in that lemma. The finite
@@ -720,7 +723,8 @@ build/axiom-audit workflow and a manually dispatched private Linux Comparator
 workflow, with independent Challenge compilation, Lean/NanoDa replay and
 positive/negative controls. Run-specific mechanical claims require their actual
 exact-commit reports; merely preparing these workflows is not a passing run.
-See `publication/PALOMAR.md` for the protocol and retained scope limitations.
+The official full preflight is run by `.github/workflows/palomar-preflight.yml`;
+the retained scope limitations are stated in `README.md` and `formalization.yaml`.
 
 The maintainer selected Apache-2.0 for the formalization. Manuscript and
 third-party terms remain separate in `NOTICE`. The repository stays private;

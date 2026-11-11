@@ -8,7 +8,7 @@ name: Palomar full preflight
         required: true
         type: string
       authorization_relationship:
-        description: Truthful supported relationship; see publication/PALOMAR.md
+        description: Truthful supported relationship, such as "I am a responsible author or maintainer"
         required: true
         type: string
 

@@ -73,7 +73,7 @@
         "tool_setup": "Lean and pinned Mathlib proof development, compiler-guided iteration, source-statement audits and automated axiom checks. Exact model revisions for every earlier contributing session were not retained.",
         "cost": {
           "wall_time": "not tracked",
-          "spend_usd": "subscription-based; not tracked",
+          "spend_usd": "not tracked",
           "hardware": "local macOS workstation; private GitHub-hosted Linux verification"
         },
         "prompting_notes": "Human mathematical direction, requests to preserve source targets and frozen exports, autonomous technical proof development and explicit recording of corrections."
