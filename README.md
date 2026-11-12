@@ -13,6 +13,10 @@ and six with an explicit correction or endpoint convention. The proofs use only 
 axioms `propext`, `Classical.choice` and `Quot.sound`, and there is no `sorry`
 outside the three deliberate statement holes of `Challenge.lean`.**
 
+Registered as **[PALOMAR-2026-11-01-000012, version 1](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-01-000012&version=1)**
+for the main theorem and the strong profile theorem with its uniform strengthening;
+the registered snapshot is commit [`f1a5b7d`](https://github.com/igor-kortchemski/height-infection-tree/commit/f1a5b7dfdcc9b3d6f7665d9e99535760c181c47f).
+
 Statements: [Challenge.lean](Challenge.lean) · Correspondence record: [FORMALIZATION_REPORT.md](FORMALIZATION_REPORT.md) · [Verification](#verify)
 
 ## Main results
@@ -100,8 +104,8 @@ proofs; its badge shows the latest run. It passed on 31 October 2026 for commit
 whose Lean files and build configuration are identical to the current ones
 (`check-package.py` checks them against [source-files.sha256](publication/source-files.sha256)).
 Earlier evidence: [source baseline](verification/source-baseline/README.md) and
-[31-result audit](verification/paper-31-results/README.md). The result is not
-registered in Palomar; intake and registration have not been requested.
+[31-result audit](verification/paper-31-results/README.md). The same commit is
+the registered snapshot (see above).
 
 ## How it was made
 

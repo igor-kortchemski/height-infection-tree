@@ -5,9 +5,10 @@
 The maintainer authorized public release and official full mechanical preflight
 on 31 October 2026. The clean project is public and the development archive
 remains private and read-only. Official full-preflight outcomes must be read
-from the exact-commit mechanical report; service intake and registration have
-not been requested. Earlier private-preparation status statements below are
-historical records.
+from the exact-commit mechanical report. Commit `f1a5b7d` was registered on
+1 November 2026 as
+[PALOMAR-2026-11-01-000012, version 1](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-01-000012&version=1).
+Earlier private-preparation status statements below are historical records.
 
 The active project is `igor-kortchemski/height-infection-tree`, formerly the
 clean publication candidate `height-infection-tree-palomar`. The original
@@ -39,8 +40,8 @@ above, including Lean and NanoDa acceptance. Their inspected reports are
 archived in `verification/source-baseline/`. They are historical evidence, not
 reports for a later publication-copy commit. Fresh verification of this copy
 is recorded by its own CI and Comparator reports. The official full Palomar
-preflight has its own exact-commit mechanical report; registry intake and
-registration have not been requested.
+preflight has its own exact-commit mechanical report, and the registry entry
+above records the registered commit.
 
 ## Status and scope
 
